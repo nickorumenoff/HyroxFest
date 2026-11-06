@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Máquinas Hyrox Fest</title>
+<style>
+:root{color-scheme:dark;--bg:#0b0b0b;--card:#161616;--line:#2a2a2a;--neon:#a3ff12;--olive:#6fa82a;--text:#f4f4f4;--mute:#9a9a9a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:radial-gradient(900px 500px at 80% -10%,#1c2a0a 0,transparent 60%),var(--bg);color:var(--text);font-family:Montserrat,"Segoe UI",Arial,sans-serif;min-height:100vh}
+header{text-align:center;padding:28px 16px 8px}
+.logo{width:96px;height:96px}
+.tag{display:inline-block;background:var(--neon);color:#000;font-weight:800;letter-spacing:.08em;padding:4px 12px;transform:rotate(-3deg);font-size:.8rem}
+h1{margin:10px 0 0;font-size:clamp(2.2rem,9vw,4.5rem);letter-spacing:.35em;font-weight:800;line-height:1;padding-left:.35em}
+.sub{color:var(--mute);letter-spacing:.3em;font-size:.75rem;margin-top:8px}
+.bar{height:6px;width:min(420px,80%);margin:14px auto 0;background:repeating-linear-gradient(115deg,var(--neon) 0 14px,transparent 14px 18px)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:14px 10px;background:rgba(11,11,11,.92);backdrop-filter:blur(8px)}
+nav a{color:var(--text);text-decoration:none;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 16px;border:1px solid var(--line);border-radius:999px}
+nav a.on{background:var(--neon);color:#000;border-color:var(--neon)}
+main{max-width:860px;margin:0 auto;padding:10px 16px 50px}
+section{display:none}section.on{display:block}
+h2{color:var(--neon);text-transform:uppercase;letter-spacing:.1em;font-size:1.5rem;margin:12px 0 18px}
+.rules{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.rules li{background:var(--card);border-left:4px solid var(--neon);padding:14px 16px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;font-size:.92rem;border-radius:4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px}
+.soon{text-align:center;padding:50px 20px}
+.soon b{display:block;font-size:2rem;color:var(--neon);letter-spacing:.1em;margin-bottom:8px}
+.soon span{color:var(--mute)}
+.pairs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.pairs li{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-weight:600}
+.pairs .n{background:var(--neon);color:#000;font-weight:800;min-width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:.85rem}
+.pairs em{color:var(--olive);font-style:normal;font-weight:800}
+.count{color:var(--mute);margin:-8px 0 16px}
+.info{display:grid;gap:12px;margin-bottom:16px}
+.info div{background:var(--card);border-left:4px solid var(--neon);padding:14px 16px;border-radius:4px}
+.info small{display:block;color:var(--olive);text-transform:uppercase;letter-spacing:.1em;font-weight:800}
+.btn{display:inline-block;background:var(--neon);color:#000;font-weight:800;text-decoration:none;padding:12px 20px;border-radius:6px;text-transform:uppercase;letter-spacing:.06em;margin:4px 0 14px}
+iframe{width:100%;height:340px;border:0;border-radius:10px;background:var(--card)}
+#cd{display:flex;gap:10px;margin-bottom:16px}
+#cd div{flex:1;background:var(--card);border:1px solid var(--line);border-radius:8px;text-align:center;padding:10px 4px}
+#cd b{display:block;font-size:1.6rem;color:var(--neon)}
+#cd span{font-size:.65rem;color:var(--mute);letter-spacing:.1em;text-transform:uppercase}
+footer{text-align:center;color:var(--olive);font-family:"Brush Script MT",cursive;font-size:1.5rem;padding:20px 16px 40px}
+</style>
+</head>
+<body>
+<header>
+<svg class="logo" viewBox="0 0 100 100" aria-label="Logo Máquinas"><circle cx="50" cy="50" r="48" fill="#000"/><path d="M18 30h64v24L50 88 18 54z" fill="#3fa63a"/><rect x="46" y="8" width="8" height="30" fill="#fff"/><rect x="30" y="38" width="40" height="16" rx="4" fill="#fff"/><rect x="22" y="56" width="56" height="14" rx="3" fill="#000" stroke="#fff" stroke-width="3"/><path d="M44 62l3 3h6l3-3" stroke="#fff" stroke-width="2" fill="none"/></svg>
+<div><span class="tag">IMPORTANTE</span></div>
+<h1>HYROX</h1>
+<div class="sub">MÁQUINAS HYROX FEST</div>
+<div class="bar"></div>
+</header>
+<nav id="nav">
+<a href="#reglamento">Reglamento</a><a href="#hyrox">Hyrox</a><a href="#parejas">Parejas</a><a href="#info">Información</a>
+</nav>
+<main>
+<section id="reglamento">
+<h2>Reglas del Hyrox</h2>
+<ul class="rules">
+<li>Presentarse a las 10:30 en el galpón.</li>
+<li>Entregar el six pac correspondiente.</li>
+<li>Parejas deben ir con atuendos match.</li>
+<li>No cambiar de estación hasta no culminar las repeticiones.</li>
+<li>Cada participante debe realizar la mitad del circuito (sumatorio).</li>
+<li>El trote debe ser realizado por ambos.</li>
+<li>Todo participante debe iniciar y finalizar con el cono de cumpleaños.</li>
+<li>Mantener el orden para la entrega de kit.</li>
+<li>Cada pareja debe tener su tatuaje temporal pegado para poder iniciar.</li>
+<li>Venir dispuesto a pasar un rato agradable.</li>
+</ul>
+</section>
+<section id="hyrox">
+<h2>Hyrox</h2>
+<div class="card soon"><b>PRÓXIMAMENTE</b><span>El entrenamiento / circuito se publicará muy pronto. ¡Mantente atento!</span></div>
+</section>
+<section id="parejas">
+<h2>Parejas confirmadas</h2>
+<p class="count">25 parejas confirmadas</p>
+<ul class="pairs" id="pl"></ul>
+</section>
+<section id="info">
+<h2>Información</h2>
+<div id="cd"><div><b id="d">0</b><span>Días</span></div><div><b id="h">0</b><span>Horas</span></div><div><b id="m">0</b><span>Min</span></div><div><b id="s">0</b><span>Seg</span></div></div>
+<div class="info">
+<div><small>Fecha</small>Sábado 14 de noviembre</div>
+<div><small>Hora</small>10:30 a. m. (presentarse en el galpón)</div>
+<div><small>Dirección</small>Calle Urdaneta con Av. Venezuela, Barquisimeto 3001, Lara, Venezuela<br>3PC6+XP Barquisimeto</div>
+</div>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=3PC6%2BXP+Barquisimeto%2C+Lara%2C+Venezuela">Abrir en Google Maps</a>
+<iframe title="Mapa" loading="lazy" src="https://www.google.com/maps?q=3PC6%2BXP+Barquisimeto%2C+Lara%2C+Venezuela&output=embed"></iframe>
+</section>
+</main>
+<footer>Nos vemos el 14 · Máquinas de guerra</footer>
+<script>
+var P=["Abigail|Melany","Ari|Ana Sophia","Carlos M|Yunye","Cerdo|Jair","Chente|Leo","Daniela|Isaura","Ely|Yumar","Eme|Karen","Fueguito|Yoli","Gian|Alexander","Jenny|Miri","Jesús|Arcadio","Jorge|Agustín","Junior|Milexa","Karol|Paola","María|Douglas","María Parra|Carlos G.","Merly|Carolina","Nicolás|Gustavo","Nicole|Alefit","Nino|Jorge","Oreste|David C.","Oriana|Lara","Rebeca|Emily","Salmeron|Naya"];
+document.getElementById("pl").innerHTML=P.map(function(p,i){var a=p.split("|");return '<li><span class="n">'+(i+1)+'</span><span>'+a[0]+' <em>×</em> '+a[1]+'</span></li>'}).join("");
+var names=["reglamento","hyrox","parejas","info"];
+function route(){var h=location.hash.slice(1);if(names.indexOf(h)<0)h="reglamento";
+names.forEach(function(n){document.getElementById(n).classList.toggle("on",n===h)});
+document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)})}
+window.addEventListener("hashchange",route);route();
+function tick(){var t=new Date(2026,10,14,10,30)-new Date();if(t<0)t=0;var s=Math.floor(t/1000);
+document.getElementById("d").textContent=Math.floor(s/86400);
+document.getElementById("h").textContent=Math.floor(s%86400/3600);
+document.getElementById("m").textContent=Math.floor(s%3600/60);
+document.getElementById("s").textContent=s%60}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
