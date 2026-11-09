@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,6 +41,7 @@ iframe{width:100%;height:340px;border:0;border-radius:10px;background:var(--card
 #cd div{flex:1;background:var(--card);border:1px solid var(--line);border-radius:8px;text-align:center;padding:10px 4px}
 #cd b{display:block;font-size:1.6rem;color:var(--neon)}
 #cd span{font-size:.65rem;color:var(--mute);letter-spacing:.1em;text-transform:uppercase}
+.wk{list-style:none;margin:0;padding:0;display:grid;gap:8px;counter-reset:s}.wk li{background:var(--olive);color:#fff;text-align:center;font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:.03em;padding:14px 12px;border-radius:3px}.wk li.run{background:#3f6b12}.wk li.st{background:#4f8014;border-left:6px solid var(--neon)}.wk li.note{background:var(--card);border:1px solid var(--neon);color:var(--neon);font-size:.85rem;font-style:normal;margin-top:8px;line-height:1.5}.pairs li.pend{opacity:.65;border-style:dashed}.pairs i{margin-left:auto;font-style:normal;font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.pairs i.ok{color:var(--neon);font-size:1.1rem}.pairs i.pe{color:var(--mute)}
 footer{text-align:center;color:var(--olive);font-family:"Brush Script MT",cursive;font-size:1.5rem;padding:20px 16px 40px}
 </style>
 </head>
@@ -73,11 +74,24 @@ footer{text-align:center;color:var(--olive);font-family:"Brush Script MT",cursiv
 </section>
 <section id="hyrox">
 <h2>Hyrox</h2>
-<div class="card soon"><b>PRÓXIMAMENTE</b><span>El entrenamiento / circuito se publicará muy pronto. ¡Mantente atento!</span></div>
+<p class="count">Workout oficial · Máquinas Hyrox Fest</p>
+<ol class="wk">
+<li class="run">400 mts run</li>
+<li class="st">Estación 1 · 100 lunges alt</li>
+<li class="run">400 mts run</li>
+<li class="st">Estación 2 · 200 mts farmer carry</li>
+<li class="run">400 mts run</li>
+<li class="st">Estación 3 · 100 sentadillas con peso</li>
+<li class="run">400 mts run</li>
+<li class="st">Estación 4 · 60 burpees to plate</li>
+<li class="run">400 mts run</li>
+<li class="st">Estación 5 · 2 cervezas fondo blanco</li>
+<li class="note">Los pesos serán asignados el día de la carrera<br>Juez: Romel Camacho</li>
+</ol>
 </section>
 <section id="parejas">
 <h2>Parejas confirmadas</h2>
-<p class="count">25 parejas confirmadas</p>
+<p class="count">25 parejas · 23 confirmadas ✓</p>
 <ul class="pairs" id="pl"></ul>
 </section>
 <section id="info">
@@ -94,8 +108,8 @@ footer{text-align:center;color:var(--olive);font-family:"Brush Script MT",cursiv
 </main>
 <footer>Nos vemos el 14 · Máquinas de guerra</footer>
 <script>
-var P=["Abigail|Melany","Ari|Ana Sophia","Carlos M|Yunye","Cerdo|Jair","Chente|Leo","Daniela|Isaura","Ely|Yumar","Eme|Karen","Fueguito|Yoli","Gian|Alexander","Jenny|Miri","Jesús|Arcadio","Jorge|Agustín","Junior|Milexa","Karol|Paola","María|Douglas","María Parra|Carlos G.","Merly|Carolina","Nicolás|Gustavo","Nicole|Alefit","Nino|Jorge","Oreste|David C.","Oriana|Lara","Rebeca|Emily","Salmeron|Naya"];
-document.getElementById("pl").innerHTML=P.map(function(p,i){var a=p.split("|");return '<li><span class="n">'+(i+1)+'</span><span>'+a[0]+' <em>×</em> '+a[1]+'</span></li>'}).join("");
+var P=["Jenny|Miri|1","María|Douglas|1","Eme|Karen|1","Nicolás|Gustavo|1","Chente|Leo|1","Oriana|Lara|1","Jesús|Arcadio|1","Carlos M|Yunye|1","Gabriela|María|1","María Parra|Carlos G.|1","Daniela|Isaura|1","Rebeca|Emily|1","Jorge|Agustín|1","Abigail|Melany|1","Merly|Carolina|1","Fueguito|Yoli|1","Nino|Jorge|1","Karol|Paola|1","Cerdo|Jair|0","Salmeron|Naya|1","Gian|Alexander|1","Ari|Ana Sophia|1","Oreste|David C.|0","Ely|Yumar|1","Junior|Milexa|1"];
+document.getElementById("pl").innerHTML=P.map(function(p,i){var a=p.split("|");var ok=a[2]=="1";return '<li'+(ok?'':' class="pend"')+'><span class="n">'+(i+1)+'</span><span>'+a[0]+' <em>×</em> '+a[1]+'</span>'+(ok?'<i class="ok">✓</i>':'<i class="pe">Pendiente</i>')+'</li>'}).join("");
 var names=["reglamento","hyrox","parejas","info"];
 function route(){var h=location.hash.slice(1);if(names.indexOf(h)<0)h="reglamento";
 names.forEach(function(n){document.getElementById(n).classList.toggle("on",n===h)});
