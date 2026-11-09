@@ -91,7 +91,7 @@ footer{text-align:center;color:var(--olive);font-family:"Brush Script MT",cursiv
 </section>
 <section id="parejas">
 <h2>Parejas confirmadas</h2>
-<p class="count">25 parejas · 23 confirmadas ✓</p>
+<p class="count">25 parejas confirmadas</p>
 <ul class="pairs" id="pl"></ul>
 </section>
 <section id="info">
@@ -109,7 +109,7 @@ footer{text-align:center;color:var(--olive);font-family:"Brush Script MT",cursiv
 <footer>Nos vemos el 14 · Máquinas de guerra</footer>
 <script>
 var P=["Jenny|Miri|1","María|Douglas|1","Eme|Karen|1","Nicolás|Gustavo|1","Chente|Leo|1","Oriana|Lara|1","Jesús|Arcadio|1","Carlos M|Yunye|1","Gabriela|María|1","María Parra|Carlos G.|1","Daniela|Isaura|1","Rebeca|Emily|1","Jorge|Agustín|1","Abigail|Melany|1","Merly|Carolina|1","Fueguito|Yoli|1","Nino|Jorge|1","Karol|Paola|1","Cerdo|Jair|0","Salmeron|Naya|1","Gian|Alexander|1","Ari|Ana Sophia|1","Oreste|David C.|0","Ely|Yumar|1","Junior|Milexa|1"];
-document.getElementById("pl").innerHTML=P.map(function(p,i){var a=p.split("|");var ok=a[2]=="1";return '<li'+(ok?'':' class="pend"')+'><span class="n">'+(i+1)+'</span><span>'+a[0]+' <em>×</em> '+a[1]+'</span>'+(ok?'<i class="ok">✓</i>':'<i class="pe">Pendiente</i>')+'</li>'}).join("");
+document.getElementById("pl").innerHTML=P.map(function(p,i){var a=p.split("|");return '<li><span class="n">'+(i+1)+'</span><span>'+a[0]+' <em>×</em> '+a[1]+'</span></li>'}).join("");
 var names=["reglamento","hyrox","parejas","info"];
 function route(){var h=location.hash.slice(1);if(names.indexOf(h)<0)h="reglamento";
 names.forEach(function(n){document.getElementById(n).classList.toggle("on",n===h)});
